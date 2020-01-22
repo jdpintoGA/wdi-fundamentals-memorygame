@@ -41,6 +41,14 @@ console.log("user flipped "+ cards[cardId].rank);
 
 
 
+function createBoard(){
+	for (let i = 0; i < cards.length; i++) {
+		let cardElement = document.createElement("img").setAttribute("src", "images/back.png");
+		cardElement = this.
+	}
+};
+
+
 flipCard(0);
 console.log(cards[0].cardImage);
 console.log(cards[0].suit);
