@@ -26,9 +26,11 @@ let cardsInPlay = [];
 
 function checkForMatch() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
-    console.log('you found a match!');
+    alert('you found a match!');
   } else {
-    console.log('try again :(');
+    alert('try again :(');
+    window.location.reload();
+    //page refresh
   }
 }
 
@@ -38,7 +40,7 @@ function flipCard(event) {
   console.log(event.srcElement);
   console.log('user flipped ' + cards[cardId].rank);
   cardsInPlay.push(cards[cardId].rank);
-  if (cardsInPlay.length === 2 || cardsInPlay.length === 4) {
+  if (cardsInPlay.length % 2 === 0) {
     checkForMatch();
   }
 }
@@ -54,3 +56,9 @@ function createBoard() {
 }
 
 createBoard();
+
+function mTest(a, b) {
+  console.log(a % b);
+}
+
+mTest(2, 0);
